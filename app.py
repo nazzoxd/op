@@ -12,16 +12,16 @@ import asyncio
 from concurrent.futures import ThreadPoolExecutor
 
 # Initialize bot with your token
-bot = TeleBot("8528695397:AAEX0oVUQzZxKlfE4tzYxmI95krguZ0JKgM")
+bot = TeleBot("8281283407:AAH5rN5h3OOanofg_SnSFUWrsqM7F_5-k6I")
 
 # Data storage
 USER_SITES = {}  # Format: {user_id: [{"url": "site1", "price": "1.0", "working": True}, ...]}
 USER_CHECKS = {}  # Store ongoing mass checks
 BANNED_USERS = set()  # Banned user IDs
-ADMIN_IDS = [5994305183]  # Admin user IDs - FIXED: Added your admin ID
+ADMIN_IDS = [2040992234]  # Admin user IDs - FIXED: Added your admin ID
 ALLOWED_CHAT_IDS = set()  # Add allowed chat IDs here
-GROUP_CHAT_ID = -1003232934009  # Replace with your group chat ID
-CHANNEL_USERNAME = "@solo_rohan"  # Channel to check subscription
+GROUP_CHAT_ID = -1003519538285  # Replace with your group chat ID
+CHANNEL_USERNAME = "@shopicharge"  # Channel to check subscription
 SUBSCRIBED_USERS = set()  # Users who have subscribed
 PENDING_APPROVAL = {}  # Users pending admin approval
 APPROVED_USERS = set()  # Approved users who can use all features
@@ -622,7 +622,7 @@ def format_approved_response(result, user_full_name, processing_time, site_url):
 ━━━━━━━━━━━━━━━━━━━
 [⸙] 𝐒𝐢𝐭𝐞 ⌁ {site_url}
 [⸙] 𝐑𝐞𝐪 ⌁ {user_full_name}
-[⸙] 𝐃𝐞𝐯 ⌁ @solo_rohan
+[⸙] 𝐃𝐞𝐯 ⌁ @nazzogen
 [⸙] 𝐓𝐢𝐦𝐞 ⌁ {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝𝐬
 """
 
@@ -633,86 +633,86 @@ def format_shopify_response(result, user_full_name, processing_time):
     if result['status'] == 'APPROVED':
         # HIT card formatting - NEW STYLISH FORMAT
         return f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗛𝗜𝗧 𝗖𝗔𝗥𝗗 𝗙𝗢𝗨𝗡𝗗 ✅</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗛𝗜𝗧 𝗖𝗔𝗥𝗗 𝗙𝗢𝗨𝗡𝗗 ✅</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗖𝗮𝗿𝗱 ➳ <code>{result['card']}</code>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ⌁ <i>{result['gateway']}</i>  
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 ⌁ <i>{result['message']}</i>
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐁𝐫𝐚𝐧𝐝 ⌁ {result['brand']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐓𝐲𝐩𝐞 ⌁ {result['type']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐁𝐚𝐧𝐤 ⌁ {result['bank']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ⌁ {result['country']}
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐑𝐞𝐪 𝐁𝐲 ⌁ {user_full_name}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐃𝐞𝐯 ⌁ @solo_rohan
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗧𝗶𝗺𝗲 ⌁  {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗖𝗮𝗿𝗱 ➳ <code>{result['card']}</code>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ⌁ <i>{result['gateway']}</i>  
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 ⌁ <i>{result['message']}</i>
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐁𝐫𝐚𝐧𝐝 ⌁ {result['brand']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐓𝐲𝐩𝐞 ⌁ {result['type']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐁𝐚𝐧𝐤 ⌁ {result['bank']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ⌁ {result['country']}
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐑𝐞𝐪 𝐁𝐲 ⌁ {user_full_name}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐃𝐞𝐯 ⌁ @shopicharge
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗧𝗶𝗺𝗲 ⌁  {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝
 """
     
     elif result['status'] == 'APPROVED_OTP' and 'INSUFFICIENT' in result['message'].upper():
         # INSUFFICIENT card formatting - NEW STYLISH FORMAT
         return f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗜𝗡𝗦𝗨𝗙𝗙𝗜𝗖𝗜𝗘𝗡𝗧 𝗙𝗨𝗡𝗗𝗦 💰</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗜𝗡𝗦𝗨𝗙𝗙𝗜𝗖𝗜𝗘𝗡𝗧 𝗙𝗨𝗡𝗗𝗦 💰</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗖𝗮𝗿𝗱 ➳ <code>{result['card']}</code>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ⌁ <i>{result['gateway']}</i>  
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 ⌁ <i>{result['message']}</i>
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐁𝐫𝐚𝐧𝐝 ⌁ {result['brand']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐓𝐲𝐩𝐞 ⌁ {result['type']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐁𝐚𝐧𝐤 ⌁ {result['bank']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ⌁ {result['country']}
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐑𝐞𝐪 𝐁𝐲 ⌁ {user_full_name}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐃𝐞𝐯 ⌁ @solo_rohan
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗧𝗶𝗺𝗲 ⌁  {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗖𝗮𝗿𝗱 ➳ <code>{result['card']}</code>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ⌁ <i>{result['gateway']}</i>  
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 ⌁ <i>{result['message']}</i>
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐁𝐫𝐚𝐧𝐝 ⌁ {result['brand']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐓𝐲𝐩𝐞 ⌁ {result['type']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐁𝐚𝐧𝐤 ⌁ {result['bank']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ⌁ {result['country']}
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐑𝐞𝐪 𝐁𝐲 ⌁ {user_full_name}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐃𝐞𝐯 ⌁ @shopicharge
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗧𝗶𝗺𝗲 ⌁  {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝
 """
     
     elif result['status'] == 'APPROVED_OTP':
         # 3D card formatting - NEW STYLISH FORMAT
         return f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝟯𝗗 𝗦𝗘𝗖𝗨𝗥𝗘 𝗖𝗔𝗥𝗗 🔐</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝟯𝗗 𝗦𝗘𝗖𝗨𝗥𝗘 𝗖𝗔𝗥𝗗 🔐</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗖𝗮𝗿𝗱 ➳ <code>{result['card']}</code>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ⌁ <i>{result['gateway']}</i>  
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 ⌁ <i>{result['message']}</i>
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐁𝐫𝐚𝐧𝐝 ⌁ {result['brand']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐓𝐲𝐩𝐞 ⌁ {result['type']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐁𝐚𝐧𝐤 ⌁ {result['bank']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ⌁ {result['country']}
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐑𝐞𝐪 𝐁𝐲 ⌁ {user_full_name}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐃𝐞𝐯 ⌁ @solo_rohan
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗧𝗶𝗺𝗲 ⌁  {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗖𝗮𝗿𝗱 ➳ <code>{result['card']}</code>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ⌁ <i>{result['gateway']}</i>  
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 ⌁ <i>{result['message']}</i>
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐁𝐫𝐚𝐧𝐝 ⌁ {result['brand']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐓𝐲𝐩𝐞 ⌁ {result['type']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐁𝐚𝐧𝐤 ⌁ {result['bank']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ⌁ {result['country']}
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐑𝐞𝐪 𝐁𝐲 ⌁ {user_full_name}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐃𝐞𝐯 ⌁ @shopicharge
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗧𝗶𝗺𝗲 ⌁  {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝
 """
     
     else:
         # Default formatting for other statuses - ORIGINAL STYLISH FORMAT
         return f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ {status_text[result['status']]} {status_emoji[result['status']]}</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ {status_text[result['status']]} {status_emoji[result['status']]}</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗖𝗮𝗿𝗱
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗖𝗮𝗿𝗱
    ↳ <code>{result['card']}</code>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ⌁ <i>{result['gateway']}</i>  
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 ⌁ <i>{result['message']}</i>
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐁𝐫𝐚𝐧𝐝 ⌁ {result['brand']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐓𝐲𝐩𝐞 ⌁ {result['type']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐁𝐚𝐧𝐤 ⌁ {result['bank']}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ⌁ {result['country']}
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐑𝐞𝐪 𝐁𝐲 ⌁ {user_full_name}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝐃𝐞𝐯 ⌁ @solo_rohan
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗧𝗶𝗺𝗲 ⌁  {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ⌁ <i>{result['gateway']}</i>  
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 ⌁ <i>{result['message']}</i>
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐁𝐫𝐚𝐧𝐝 ⌁ {result['brand']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐓𝐲𝐩𝐞 ⌁ {result['type']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐁𝐚𝐧𝐤 ⌁ {result['bank']}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ⌁ {result['country']}
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐑𝐞𝐪 𝐁𝐲 ⌁ {user_full_name}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝐃𝐞𝐯 ⌁ @shopicharge
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗧𝗶𝗺𝗲 ⌁  {processing_time:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝
 """
 
 def send_to_group(result, user_full_name, processing_time, site_url):
@@ -775,7 +775,7 @@ def handle_start(message):
 2. Check cards with /sh or mass check with /mass
 3. The bot will use your sites randomly for checking
 
-<a href='https://t.me/solo_rohan'>➣ Developer: @solo_rohan</a>
+<a href='https://t.me/shopicharge'>➣ Developer: @shopicharge</a>
         """,
         parse_mode='HTML',
         disable_web_page_preview=True
@@ -988,14 +988,14 @@ def handle_msite(message):
                     bot.send_message(
                         message.chat.id,
                         f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗦𝗶𝘁𝗲 𝗔𝗱𝗱𝗲𝗱 ✅</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗦𝗶𝘁𝗲 𝗔𝗱𝗱𝗲𝗱 ✅</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
                             
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲 ➳ <code>{url}</code>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 ➳ {api_message[:50]}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗔𝗺𝗼𝘂𝗻𝘁 ➳ ${price}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗚𝗮𝘁𝗲𝘄𝗮𝘆 ➳ {gateway}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲 ➳ <code>{url}</code>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 ➳ {api_message[:50]}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗔𝗺𝗼𝘂𝗻𝘁 ➳ ${price}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗚𝗮𝘁𝗲𝘄𝗮𝘆 ➳ {gateway}
 
 <i>✅ Successfully added to your sites list</i>
 ─────── ⸙ ────────
@@ -1009,13 +1009,13 @@ def handle_msite(message):
                     bot.send_message(
                         message.chat.id,
                         f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗦𝗶𝘁𝗲 𝗙𝗮𝗶𝗹𝗲𝗱 ❌</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗦𝗶𝘁𝗲 𝗙𝗮𝗶𝗹𝗲𝗱 ❌</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
                             
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲 ➳ <code>{url}</code>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 ➳ {test_message[:50]}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗦𝘁𝗮𝘁𝘂𝘀 ➳ Not Working
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲 ➳ <code>{url}</code>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 ➳ {test_message[:50]}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗦𝘁𝗮𝘁𝘂𝘀 ➳ Not Working
 
 <i>❌ Skipped - Site not working</i>
 ─────── ⸙ ────────
@@ -1037,20 +1037,20 @@ def handle_msite(message):
             chat_id=message.chat.id,
             message_id=status_msg.message_id,
             text=f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗕𝘂𝗹𝗸 𝗔𝗱𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 ✅</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗕𝘂𝗹𝗸 𝗔𝗱𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 ✅</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲𝘀 𝗳𝗼𝘂𝗻𝗱 ➳ {len(shopify_sites)}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗮𝗱𝗱𝗲𝗱 ➳ {added_count}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗮𝗱𝗱 ➳ {failed_count}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗔𝗹𝗿𝗲𝗮𝗱𝘆 𝗲𝘅𝗶𝘀𝘁𝗲𝗱 ➳ {already_exists_count}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗧𝗼𝘁𝗮𝗹 𝘀𝗶𝘁𝗲𝘀 𝗻𝗼𝘄 ➳ {len(USER_SITES[user_id])}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲𝘀 𝗳𝗼𝘂𝗻𝗱 ➳ {len(shopify_sites)}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗮𝗱𝗱𝗲𝗱 ➳ {added_count}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗮𝗱𝗱 ➳ {failed_count}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗔𝗹𝗿𝗲𝗮𝗱𝘆 𝗲𝘅𝗶𝘀𝘁𝗲𝗱 ➳ {already_exists_count}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗧𝗼𝘁𝗮𝗹 𝘀𝗶𝘁𝗲𝘀 𝗻𝗼𝘄 ➳ {len(USER_SITES[user_id])}
 
-<a href='https://t.me/solo_rohan'>──────── ⸙ ─────────</a>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝙐𝙨𝙚 <code>/myurl</code> 𝙩𝙤 𝙫𝙞𝙚𝙬 𝙖𝙡𝙡 𝙮𝙤𝙪𝙧 𝙨𝙞𝙩𝙚𝙨
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝙐𝙨𝙚 <code>/clean</code> 𝙩𝙤 𝙧𝙚𝙢𝙤𝙫𝙚 𝙣𝙤𝙣-𝙬𝙤𝙧𝙠𝙞𝙣𝙜 𝙨𝙞𝙩𝙚𝙨
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝙐𝙨𝙚 <code>/sh</code> 𝙩𝙤 𝙘𝙝𝙚𝙘𝙠 𝙘𝙖𝙧𝙙𝙨
+<a href='https://t.me/shopicharge'>──────── ⸙ ─────────</a>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝙐𝙨𝙚 <code>/myurl</code> 𝙩𝙤 𝙫𝙞𝙚𝙬 𝙖𝙡𝙡 𝙮𝙤𝙪𝙧 𝙨𝙞𝙩𝙚𝙨
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝙐𝙨𝙚 <code>/clean</code> 𝙩𝙤 𝙧𝙚𝙢𝙤𝙫𝙚 𝙣𝙤𝙣-𝙬𝙤𝙧𝙠𝙞𝙣𝙜 𝙨𝙞𝙩𝙚𝙨
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝙐𝙨𝙚 <code>/sh</code> 𝙩𝙤 𝙘𝙝𝙚𝙘𝙠 𝙘𝙖𝙧𝙙𝙨
             """,
             parse_mode='HTML',
             disable_web_page_preview=True
@@ -1125,12 +1125,12 @@ def handle_seturl(message):
             bot.edit_message_text(chat_id=message.chat.id,
                                 message_id=status_msg.message_id,
                                 text=f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗦𝗶𝘁𝗲 𝗙𝗮𝗶𝗹𝗲𝗱 ❌</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗦𝗶𝘁𝗲 𝗙𝗮𝗶𝗹𝗲𝗱 ❌</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲 ➳ <code>{url}</code>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 ➳ {test_message[:50]}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲 ➳ <code>{url}</code>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 ➳ {test_message[:50]}
 
 <i>❌ Failed to verify Shopify site. Please check your URL and try again.</i>
 ─────── ⸙ ────────
@@ -1163,14 +1163,14 @@ def handle_seturl(message):
         bot.edit_message_text(chat_id=message.chat.id,
                             message_id=status_msg.message_id,
                             text=f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗦𝗶𝘁𝗲 𝗔𝗱𝗱𝗲𝗱 ✅</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗦𝗶𝘁𝗲 𝗔𝗱𝗱𝗲𝗱 ✅</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
                             
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲 ➳ <code>{url}</code>
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 ➳ {api_message[:50]}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗔𝗺𝗼𝘂𝗻𝘁 ➳ ${price}
-<a href='https://t.me/solo_rohan'>[⸙]</a>❖ 𝗚𝗮𝘁𝗲𝘄𝗮𝘆 ➳ {gateway}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗦𝗶𝘁𝗲 ➳ <code>{url}</code>
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 ➳ {api_message[:50]}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗔𝗺𝗼𝘂𝗻𝘁 ➳ ${price}
+<a href='https://t.me/shopicharge'>[⸙]</a>❖ 𝗚𝗮𝘁𝗲𝘄𝗮𝘆 ➳ {gateway}
 
 <i>✅ Successfully added to your sites list</i>
 ─────── ⸙ ────────
@@ -1306,9 +1306,9 @@ def handle_sh(message):
                     # Send notification to user with STYLISH FORMAT
                     if 'INSUFFICIENT' in result['message'].upper():
                         insufficient_msg = f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗜𝗡𝗦𝗨𝗙𝗙𝗜𝗖𝗜𝗘𝗡𝗧 𝗙𝗨𝗡𝗗𝗦 💰</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗜𝗡𝗦𝗨𝗙𝗙𝗜𝗖𝗜𝗘𝗡𝗧 𝗙𝗨𝗡𝗗𝗦 💰</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
 <b>Card:</b> <code>{result['card']}</code>
 <b>Response:</b> {result['message']}
@@ -1320,9 +1320,9 @@ def handle_sh(message):
                         )
                     elif result['status'] == 'APPROVED':
                         hit_msg = f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝗛𝗜𝗧 𝗖𝗔𝗥𝗗 𝗙𝗢𝗨𝗡𝗗 ✅</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝗛𝗜𝗧 𝗖𝗔𝗥𝗗 𝗙𝗢𝗨𝗡𝗗 ✅</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
 <b>Card:</b> <code>{result['card']}</code>
 <b>Response:</b> {result['message']}
@@ -1334,9 +1334,9 @@ def handle_sh(message):
                         )
                     else:
                         threed_msg = f"""
-<a href='https://t.me/solo_rohan'>┏━━━━━━━⍟</a>
-<a href='https://t.me/solo_rohan'>┃ 𝟯𝗗 𝗦𝗘𝗖𝗨𝗥𝗘 𝗖𝗔𝗥𝗗 🔐</a>
-<a href='https://t.me/solo_rohan'>┗━━━━━━━━━━━⊛</a>
+<a href='https://t.me/shopicharge'>┏━━━━━━━⍟</a>
+<a href='https://t.me/shopicharge'>┃ 𝟯𝗗 𝗦𝗘𝗖𝗨𝗥𝗘 𝗖𝗔𝗥𝗗 🔐</a>
+<a href='https://t.me/shopicharge'>┗━━━━━━━━━━━⊛</a>
 
 <b>Card:</b> <code>{result['card']}</code>
 <b>Response:</b> {result['message']}
